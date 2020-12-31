@@ -23,8 +23,8 @@ CONSTANT_ORACLE_VALUE = 1
 def print_to_file(digg, path):
     system = {
         "owner": digg.owner.address,
-        "devProxyAdmin": digg.owner.devProxyAdmin,
-        "daoProxyAdmin": digg.owner.daoProxyAdmin,
+        "devProxyAdmin": digg.devProxyAdmin,
+        "daoProxyAdmin": digg.daoProxyAdmin,
         "uFragments": digg.uFragments.address,
         "uFragmentsPolicy": digg.uFragmentsPolicy.address,
         "orchestrator": digg.orchestrator.address,
