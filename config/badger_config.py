@@ -253,4 +253,19 @@ digg_config = {
     "tokenLockParams": {"diggLockAmount": 3125 * (10 ** 9), "lockDuration": days(30)},
 }
 
-config = DotMap(badger=badger_config, sett=sett_config, digg=digg_config)
+ren_config = DotMap(
+    integrator="0x0",
+    # Fees below are in bps.
+    mintFeeBps=100,
+    burnFeeBps=100,
+    # 50/50 integrator/governance.
+    percentageFeeIntegratorBps=5000,
+    percentageFeeGovernanceBps=5000,
+)
+
+config = DotMap(
+    badger=badger_config,
+    sett=sett_config,
+    digg=digg_config,
+    ren=ren_config,
+)
